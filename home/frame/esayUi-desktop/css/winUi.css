@@ -1,0 +1,256 @@
+
+* {
+
+    font-size:12px;
+
+}
+
+body {
+
+    font-family:helvetica, tahoma, verdana, sans-serif;
+
+    font-size:12px;
+
+    margin:0px;
+
+}
+
+ul, li {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+}
+
+#footer {
+
+    padding-left: 2px;
+
+    text-align: left;
+
+    height:30px;
+
+    background-color:#95B8E7;
+
+    /*url(../img/blank.gif)*/
+
+    overflow: hidden;
+
+}
+
+#footer a {
+
+    width: 108px;
+
+    display: inline-block;
+
+    height: 30px;
+
+    line-height: 30px;
+
+    padding: 0 10px;
+
+    border:1px solid #95B8E7;
+
+    /*border-top:1px solid #fff;*/
+
+    border-left:1px solid #fff;
+
+    text-decoration: none;
+
+    color: #fff;
+
+    font-size: 12px;
+
+    /*font-weight: bold;*/
+
+    text-align: center;
+
+    float: left;
+
+}
+
+#footer a.f-minSize {
+
+    background-color: #B9D5ED;
+
+}
+
+#footer a.f-minSize:hover {
+
+    background-color: #E0ECFF;
+
+    border-top:1px solid #B9D5ED;
+
+    color: #95B8E7;
+
+}
+
+#footer a.action {
+
+    background-color: #EEF5FF;
+
+    border-top:1px solid #E0ECFF;
+
+    color: #1A6393;
+
+}
+
+#desktop {
+
+    border-bottom:1px solid #CCD5DC;
+
+    background-color:#F4F4F4;
+
+    /*url(../img/blank.gif);*/
+
+    position:relative;
+
+    overflow: hidden;
+
+}
+
+.u-menu {
+
+}
+
+.u-menu li {
+
+    list-style: none;
+
+}
+
+.u-menu a {
+
+    display: block;
+
+    /*text-align: center;*/
+    padding-left: 40px;
+
+    text-decoration: none;
+
+    height: 30px;
+
+    line-height: 30px;
+
+    font-size: 12px;
+
+    color: #333;
+
+    font-weight: bold;
+
+    border-bottom:#E2EDFF solid 1px;
+
+    background: url("../img/win-icon.png") no-repeat 12px 5px;
+ 
+}
+
+.u-menu a:hover, .z-sel {
+
+    background-color: #E2EDFF;
+
+    border-bottom:#fff solid 1px;
+
+}
+
+.u-iconBox {
+
+    margin: 30px;
+
+    width: 60px;
+
+    height: 60px;
+
+    padding: 10px;
+
+    display:block;
+    position: absolute;
+
+   
+    text-align: center;
+    text-decoration: none;
+
+
+}
+
+.u-iconBox:hover{
+
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.u-iconBox span{
+
+    display: block;
+    color: #000;
+    font-size: 16px;
+
+}
+
+.u-iconBox img {
+
+    border: 0;
+
+}
+
+.u-lb {
+
+    text-decoration: none;
+
+    margin: 2px;
+
+    color: #95B8E7;
+
+    font-weight: bold;
+
+}
+
+.u-fm {
+
+    padding:10px;
+
+}
+
+.u-fm label {
+
+    padding:0 10px;
+
+}
+
+
+.u-logo {
+
+    background: url("../img/logo.jpg") no-repeat scroll 50% 40% transparent;
+
+}
+
+.f-cb {
+
+    zoom:1;
+
+}
+
+.f-cb:after {
+
+    display:none;
+
+    content:"";
+
+    clear: both;
+
+}
+
+.f-fl {
+
+    float: left;
+
+}
+
+.f-fr {
+
+    float: right;
+
+}

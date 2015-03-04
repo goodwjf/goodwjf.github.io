@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Untitled Document</title>
+    <style>
+    #rl {
+        width:358px;
+		margin:100px auto;
+    }
+    #rl table {
+        border-collapse:collapse;
+    }
+    #rl th {
+        width:50px;
+        height:30px;
+        border:1px solid #666;
+    }
+    #rl td {
+        width:50px;
+        height:30px;
+        border:1px solid #666;
+        text-align:center;
+    }
+    .calendarHead {
+        text-align:center;
+        background-color:#09F;
+        color:#FFF;
+        height:30px;
+        line-height:30px;
+        border:1px solid #666;
+        border-bottom:0;
+    }
+    </style>
+    <script>
+    function createDom() {
+        var aWeek = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+        var oTable = document.createElement("table");
+        var oThead = document.createElement("thead");
+        var oTbody = document.createElement("tbody");
+        var otr = document.createElement("tr");
+        for (var i = 0; i < 7; i++) {
+            var oth = document.createElement("th");
+            oth.innerHTML = aWeek[i];
+            otr.appendChild(oth);
+        }
+        oThead.appendChild(otr);
+        for (var i = 0; i < 6; i++) {
+            var otr = document.createElement("tr");
+            for (var j = 0; j < 7; j++) {
+                var otd = document.createElement("td");
+                otr.appendChild(otd);
+            }
+            oTbody.appendChild(otr);
+
+        }
+        oTable.appendChild(oThead);
+        oTable.appendChild(oTbody);
+        return oTable;
+    }
+
+    function setDay(oDate, oTable) {
+        oDate = new Date();
+        var dMonth = oDate.getMonth() + 1;
+        var dYear = oDate.getFullYear();
+
+        var dayNum = 0;
+        if (dMonth == 1 || dMonth == 3 || dMonth == 5 || dMonth == 7 || dMonth == 8 || dMonth == 10 || dMonth == 12) {
+            dayNum = 31;
+        }
+        if (dMonth == 4 || dMonth == 6 || dMonth == 8 || dMonth == 9 || dMonth == 11) {
+            dayNum = 30;
+        }
+        if (dMonth == 2) {
+            dayNum = getTwoMonthDay(oDate.getFullYear(dYear));
+        }
+
+
+        oDate.setFullYear(dYear);
+        oDate.setMonth(dMonth - 1);
+        oDate.setDate(1);
+
+        var n = oDate.getDay();
+
+        var aTd = oTable.getElementsByTagName("td");
+        for (var i = 0; i < dayNum; i++) {
+            aTd[i + n].innerHTML = i + 1;
+
+        }
+    }
+
+    function setToday(oDate, oTable) {
+        var today = oDate.getDate();
+        var atd = oTable.getElementsByTagName("td");
+        var index = 0;
+        for (var i = 0; i < atd.length; i++) {
+            var td = atd[i];
+            if (today == td.innerHTML) {
+                td.style.color = "red";
+                index = i + 1 ;
+            }
+
+        }
+        for (var len = index + 7; index < len; index++) {
+ 			if(!atd[index])return;
+            atd[index].style.color = "blue";
+
+        }
+
+
+    }
+
+    function getTwoMonthDay(iYear) {
+        return ((0 == iYear % 4) && (0 != (iYear % 100))) || (0 == iYear % 400) ? 29 : 28;
+    }
+
+
+    function calendar(oDiv) {
+        var oTable = createDom();
+        var oDate = new Date();
+        var oDiv_head = document.createElement("div");
+        oDiv_head.innerHTML = oDate.getFullYear() + "年" + (oDate.getMonth() + 1) + "月";
+        oDiv_head.className = "calendarHead";
+        setDay(oDate, oTable);
+        setToday(oDate, oTable);
+        oDiv.appendChild(oDiv_head);
+        oDiv.appendChild(oTable);
+    }
+
+    window.onload = function() {
+        var oDiv = document.getElementById("rl");
+        calendar(oDiv);
+    }
+    </script>
+</head>
+
+<body>
+    <div id="rl"></div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>钟表</title>
+    <style type="text/css">
+    #c1 {
+		width:500px;
+		margin:auto;
+ 
+    }
+	.sm{ text-align:right; font-size:12px;width:900px; margin:auto; margin-top:20px; color:#F00; position:absolute; right:20px; bottom:20px;}
+    </style>
+	<script type="text/javascript" src="watch_canvas.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        new Watch({
+            size: 500,
+            id: 'c1'
+        });
+    }
+
+    
+    </script>
+
+</head>
+
+<body> <div class="sm">* 提示：在chrome、Safari、firefox 浏览器预览效果最佳</div>
+    <div id="c1"></div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ul {
+	margin:0px;
+	padding:5px;
+	width:200px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#CC3300;
+	background-color:#FFF9EF;
+	position:relative;
+	left:1px;
+ 
+	display:none;
+}
+.ul>li {
+	margin:0;
+	padding:0;
+	list-style:none;
+	color:#CC3300;
+	font-size:12px;
+	width:200px;
+	height:24px;
+	line-height:24px;
+}
+.ul>li>a {
+	width:160px;
+	height:16px;
+	padding:5px 5px 5px 15px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#FFF9EF;
+	border-bottom-color:#FFEFD7;
+	font-size:14px;
+	color:#666;
+	text-decoration:none;
+	display:block;
+}
+.ul>li:hover>a {
+	font-weight:700;
+	border-width:1px;
+	border-color:#CC3300;
+	border-right-color:#FFF9EF;
+	position:relative;
+	left:1px;
+	z-index:100;
+}
+.ul>li:hover>.box {
+	display:block;
+	left:187px;
+	top:5px;
+	width:500px;
+	height:300px;
+}
+.box {
+	border-style:solid;
+	border-width:1px;
+	border-color:#CC3300;
+	background-color:#FFF9EF;
+	display:none;
+	position:absolute;
+	padding:10px;
+}
+
+.box a{
+	text-decoration:none;
+	
+}
+#list1>li {
+	background-color:#E4393C;
+	height:28px;
+	line-height:28px;
+	width:214px;
+	list-style:none;
+	 
+ 
+}
+#list1>li:hover>ul {
+	display:block;
+}
+#list1>li>a {
+	padding:1px 3px 3px 15px;
+	margin:0;
+	font-weight:700;
+	text-decoration:none;
+	color:#fff;
+}
+#list1>li>a:hover {
+	text-decoration:none;
+	 
+}

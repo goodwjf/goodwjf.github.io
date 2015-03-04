@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>select</title>
+<link href="divselect.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="divselect.js"></script>
+<link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.ComboBox("#divselect","#inputselect",function(v){alert(v)});
+});
+</script>
+</head>
+
+<body>
+ 
+<div style="margin:50px auto">
+<form action="" method="post">
+  <div id="divselect" class="divselect" style="margin:0 auto;"> <cite>select</cite>
+    <ul>
+      <li><a href="javascript:;" selectid="1">select1</a></li>
+      <li><a href="javascript:;" selectid="2">select2</a></li>
+      <li><a href="javascript:;" selectid="3">select3</a></li>
+      <li><a href="javascript:;" selectid="4">select4</a></li>
+      <li><a href="javascript:;" selectid="5">select5</a></li>
+    </ul>
+  </div>
+  <input name="" type="hidden" value="" id="inputselect"/>
+</form>
+</div>
+<div class="codeBox">
+<pre>
+<code class="language-markup">
+ &lt;div id="divselect" class="divselect" style="margin:0 auto;"&gt &lt;cite&gtselect&lt;/cite&gt
+    &lt;ul&gt
+      &lt;li&gt&lt;a href="javascript:;" selectid="1"&gtselect1&lt;/a&gt&lt;/li&gt
+      &lt;li&gt&lt;a href="javascript:;" selectid="2"&gtselect2&lt;/a&gt&lt;/li&gt
+      &lt;li&gt&lt;a href="javascript:;" selectid="3"&gtselect3&lt;/a&gt&lt;/li&gt
+      &lt;li&gt&lt;a href="javascript:;" selectid="4"&gtselect4&lt;/a&gt&lt;/li&gt
+      &lt;li&gt&lt;a href="javascript:;" selectid="5"&gtselect5&lt;/a&gt&lt;/li&gt
+    &lt;/ul&gt
+  &lt;/div&gt
+  &lt;input name="" type="hidden" value="" id="inputselect" /&gt;
+</code>
+<code class="language-javascript">
+/*
+封装为 jquery 插件
+使用方法
+*/
+$(function(){
+	$.ComboBox("#divselect","#inputselect",function(v){alert(v)});
+});
+</code>
+</pre>
+</div>
+</body>
+</html>

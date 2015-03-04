@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="scrollNav.css">
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="scrollNav.js"></script>
+    <link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+    <script>
+    $(function() {
+        $("#nav").scrollNav();
+
+    })
+    </script>
+    <style>
+	.sm{ text-align:right; font-size:12px;width:900px; margin:auto; margin-top:20px; color:#F00; position:absolute; right:20px; bottom:20px;}
+	</style>
+</head>
+
+<body>
+    <div class="u-scrollNav" id="nav"> 
+        <p>
+        <a href="#" class="u-leftB">&lt;</a>
+        <div class="u-nav">
+            <ul>
+                <li><a href="#">1黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">2黄金叶黄金叶黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">3黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">4黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">5黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">6黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">7黄金叶（天叶2）</a>
+                </li>
+                <li><a href="#">8黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">9黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">10黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">11黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">12黄金叶（天叶2）</a>
+                </li>
+                <li><a href="#">13黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">14黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">15黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">16黄金叶（天叶）</a>
+                </li>
+                <li><a href="#">17黄金叶（天叶）</a>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="u-rightB">&gt;</a> 
+    </p>
+    </div>
+   <div class="sm">* 提示：试试缩小窗口，看看效果</div>   
+    
+    
+    <div class="codeBox" style="margin-top:10px">
+<pre>
+<code class="language-markup">
+  &lt;div class="u-scrollNav" id="nav"/&gt; 
+        &lt;a href="#" class="u-leftB"/&gt;&lt;&lt;/a/&gt;
+        &lt;div class="u-nav"/&gt;
+            &lt;ul/&gt;
+                &lt;li/&gt;&lt;a href="#"/&gt;1黄金叶（天叶）&lt;/a/&gt;
+                &lt;/li/&gt;
+                &lt;li/&gt;&lt;a href="#"/&gt;2黄金叶黄金叶黄金叶（天叶）&lt;/a/&gt;
+                &lt;/li/&gt;
+                ......
+                &lt;/li/&gt;
+            &lt;/ul/&gt;
+        &lt;/div/&gt;
+        &lt;a href="#" class="u-rightB"/&gt;&gt;&lt;/a/&gt; 
+    &lt;/p/&gt;
+    &lt;/div/&gt;
+</code>
+<code class="language-javascript">
+    /*
+    封装为 jquery 插件
+    使用方法
+    */
+    $(function(){
+          $("#nav").scrollNav();
+    });
+</code>
+</pre>
+</div>
+    
+</body>
+
+</html>

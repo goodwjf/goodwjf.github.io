@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style>
+#Ul1 {
+	margin: auto;
+	padding: 0;
+	width:425px;
+	position:relative;
+}
+li {
+	list-style: none;
+	float: left;
+	display:block;
+	width: 131px;
+	height: 80px;
+	margin:5px;
+	z-index:1;
+
+}
+li img {
+	width: 131px;
+	height: 80px;
+}
+
+li.active{ border:1px dashed #333;}
+</style>
+<script src="move2.js"></script>
+<script>
+
+window.onload = function(){
+	var oUl = document.getElementById("Ul1");
+	var aLis = document.getElementsByTagName("li");
+	var aPos = [];//存储Li的最初状态
+	var iMinZindex =2;
+	
+	//布局转换
+ 	for(var i =0; i < aLis.length; i++){
+		var oLi = aLis[i];
+			aPos[i] = {left:oLi.offsetLeft,top:oLi.offsetTop};
+	}
+		
+
+	for(var i = 0; i < aLis.length; i++){
+		var oLi = aLis[i];
+			oLi.style.left = aPos[i].left + "px";
+			oLi.style.top = aPos[i].top + "px";
+ 			oLi.style.position = "absolute";
+			oLi.style.margin = 0;
+			oLi.index = i;
+			
+			setDrag(oLi);
+			
+			
+			
+	}
+	
+	// 拖拽
+	function setDrag(obj){
+ 			obj.onmousedown = function(ev){//开始定位 
+				
+				obj.style.zIndex = iMinZindex++;
+  				var oEvent = ev || event;
+ 				var disX = oEvent.clientX	- this.offsetLeft;
+				var disY = oEvent.clientY - this.offsetTop;
+ 	
+				document.onmousemove = function(ev){
+					//执行拖动
+ 					var oEvent = ev || event;
+					obj.style.left = oEvent.clientX - disX + "px";
+ 					obj.style.top = oEvent.clientY - disY + "px";	
+					
+					//检测最近碰撞物体
+					for(var i = 0; i< aLis.length; i++){ 
+							aLis[i].className = ""; 
+					}
+					
+					var oNear = findNearest(obj);
+					if(oNear){
+						console.log("active");
+						oNear.className = "active";
+					} 
+ 				}
+				document.onmouseup = function(ev){
+					document.onmousemove = null;
+					document.onmoueup = null;
+					
+					//检测有没有碰撞 做不同处理 
+					var oNear = findNearest(obj);
+					if(oNear){
+ 						startMove(obj,aPos[oNear.index]);
+						startMove(oNear,aPos[obj.index]);
+						var tmp = obj.index;
+ 							obj.index  = oNear.index;
+							oNear.index = tmp; 		
+							oNear.className = "";
+							
+							oNear.style.zIndex = iMinZindex++;
+							obj.style.zIndex = iMinZindex++;
+													
+ 					}else{
+ 						startMove(obj,aPos[obj.index]);	//	等同　var iniObj = aPos[obj.index]; {left:iniObj.left,top:iniObj.top}
+ 					}
+					
+				}
+				clearInterval(obj.timer);
+				return false;
+			}
+	}
+	
+	//碰撞检测
+	function cdTest(obj1,obj2){
+			var l1 = obj1.offsetLeft;
+			var r1 = obj1.offsetLeft + obj1.offsetWidth;	
+			var t1 = obj1.offsetTop;
+			var b1 = obj1.offsetTop + obj1.offsetHeight;
+			
+			var l2 = obj2.offsetLeft;
+			var r2 = obj2.offsetLeft + obj2.offsetWidth;	
+			var t2 = obj2.offsetTop;
+			var b2 = obj2.offsetTop + obj2.offsetHeight;
+			
+			if(l2 > r1 || r2 <l1 || t2 > b1 || b2 < t1){
+				
+				return false;
+			}else{
+  				return true;  
+			}
+	}
+	
+	//根据勾股定理 计算出两个对象之间的距离
+	function getDistance(obj1,obj2){
+ 			var a = obj1.offsetLeft - obj2.offsetLeft;
+			var b = obj1.offsetTop - obj2.offsetTop;
+  			return Math.sqrt(a*a+b*b);
+	}
+	
+	//找到碰上的最近的的对象 
+	function findNearest(obj){
+			var iMin = 99999;
+			var iMinIndex = -1;
+			for(var i = 0; i< aLis.length; i++){
+					var oLi = aLis[i];
+					if(oLi == obj)continue;
+					if(cdTest(obj, oLi)){
+							var c = getDistance(obj,oLi);
+							console.log(c);
+							if(c < iMin){
+								iMin = c;
+								iMinIndex = i;
+							}
+					}
+			}
+			if(iMinIndex == -1){
+				return null;	
+			}else{
+				return aLis[iMinIndex];
+			}
+	}
+ 	
+}
+
+</script>
+</head>
+
+<body>
+<div style="margin-top:100px;">
+<ul id="Ul1">
+  <li><img src="img/QQ20130622-2.jpg" /></li>
+  <li><img src="img/QQ20130622-3.jpg" /></li>
+  <li><img src="img/QQ20130622-4.jpg" /></li>
+  <li><img src="img/QQ20130622-5.jpg" /></li>
+  <li><img src="img/QQ20130622-6.jpg" /></li>
+  <li><img src="img/QQ20130622-7.jpg" /></li>
+  <li><img src="img/QQ20130622-2.jpg" /></li>
+  <li><img src="img/QQ20130622-3.jpg" /></li>
+  <li><img src="img/QQ20130622-4.jpg" /></li>
+  <li><img src="img/QQ20130622-5.jpg" /></li>
+  <li><img src="img/QQ20130622-6.jpg" /></li>
+  <li><img src="img/QQ20130622-7.jpg" /></li>
+</ul>
+</div>
+</body>
+</html>

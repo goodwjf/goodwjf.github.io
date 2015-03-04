@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Default Examples</title>
+<link href="js/kindeditor/themes/default/default.css" rel="stylesheet">
+<link href="js/myPlugins/myPlugins.css" rel="stylesheet">
+<script src="js/kindeditor/kindeditor.js" charset="utf-8"></script> 
+<script charset="utf-8" src="js/webEditor.js"></script>
+<script src="js/kindeditor/lang/zh_CN.js" charset="utf-8"></script>
+<script src="js/myPlugins/myPlugins.js" charset="utf-8"></script>
+
+ <link href="../../prism/prism.css" rel="stylesheet" />
+<script src="../../prism/prism.js"></script>
+
+<script>
+      window.onload = function() {
+		  
+ 	 
+			var editor = new $C({
+				parent: "#main",
+				width: '100%',
+				height: '100px'
+			});
+			/*var editor1 = new $C({
+				obj: "#test1",
+				parent: "#main",
+				width: '800px',
+				height: '400px'
+			});
+			var editor2 = new $C({
+				obj: "textarea[name='test2']",
+				width: '800px',
+				parent: "#main"
+			});*/
+	
+			$C.getEl("#getHtml").click(function() {
+				alert(editor.getHtml());
+			});
+ 
+ 	 }
+</script>
+</head>
+
+<body>
+<div style="width:80%; margin:auto;">
+	
+
+    <h3>html静态功能测试</h3>
+    <div id="main" ></div>
+ 
+    <input type="button" id="getHtml" value="取得HTML" /><a href="jsp/demo.jsp">jsp动态功能测试</a>
+</div>
+
+
+
+
+<div class="codeBox" style="margin-top:10px;">
+<pre>
+<code class="language-markup">
+      &lt;div id="main"&gt;&lt;/div&gt;
+</code>
+<code class="language-javascript">
+    /*
+    封装为 javascript 控件
+    使用方法
+    */
+     window.onload = function() {
+
+			var editor = new $C({
+				parent: "#main"
+			});
+	
+			$C.getEl("#getHtml").click(function() {
+				alert(editor.getHtml());
+			});
+ 	 }
+</code>
+</pre>
+</div>
+
+</body>
+
+</html>

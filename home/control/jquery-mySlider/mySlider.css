@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.timer{line-height:21px;height:42px;}
+.timer div{ float:left;}
+.leftD,.rightD{cursor:pointer;  margin:1px 5px; padding:3px;  background-color:#EEE; text-align:center; color:#F00; }
+.leftD{background:url(img/left_red.png) no-repeat;height:42px; width:6px;}
+.rightD{background:url(img/right_red.png) no-repeat;height:42px; width:6px;} 
+.centerOuter{ height:50px; overflow:hidden;}
+.centerInner div{ border:1px solid #CCC; float:left; margin:1px; padding:0 2px; font-size:12px; text-align:center; background-color:#f7f7f7; cursor:pointer; height:40px;}
+.selected{ border-color:#F00!important; background:url(img/rb_icon.png) no-repeat right bottom !important;  }
+
+/*.left_gray{background:url(img/left_gray.png) no-repeat}
+.left_red{background:url(img/left_red.png) no-repeat}
+.right_gray{background:url(img/right_gray.png) no-repeat}
+.right_red{background:url(img/right_red.png) no-repeat}*/

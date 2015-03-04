@@ -1,0 +1,31 @@
+jquery.layeredTip.js
+
+自己封装的 hover 提示框
+---------------------------------
+ractive.js
+简单易用的前端mvc框架 
+
+相关资料
+http://docs.ractivejs.org/latest/keypaths
+http://www.html-js.com/article/A-day-to-learn-JavaScript-Ractivejs-frontend-MVC-framework-for-learning-the-first-step
+
+---------------------------------
+jquery.textSearch-1.0.js
+纯客户端页面关键字搜索高亮jQuery插件
+相关资料 以及 demo 
+http://www.helloweba.com/view-blog-246.html
+http://www.zhangxinxu.com/study/201006/front-client-keyword-search.html
+http://www.zhangxinxu.com/wordpress/2010/06/%E7%BA%AF%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%85%B3%E9%94%AE%E5%AD%97%E6%90%9C%E7%B4%A2%E9%AB%98%E4%BA%AEjquery%E6%8F%92%E4%BB%B6/
+---------------------------------
+xml2json.js
+
+最牛X 的 xml 转 json 的前端js工具
+相关资料
+https://code.google.com/p/x2js/
+https://x2js.googlecode.com/hg/demo.html
+
+
+格式化时间戳
+
+http://www.helloweba.com/view-blog-271.html
+http://momentjs.com/

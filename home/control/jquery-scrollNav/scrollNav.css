@@ -1,0 +1,69 @@
+    .u-scrollNav {
+        overflow: hidden;
+        height:70px;
+        border:1px dashed #D9EEFF;
+        padding: 5px;
+    }
+    .u-scrollNav p{
+        margin: 0px auto;
+        padding: 0px;
+
+    }
+    .u-leftB, .u-rightB {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+        text-decoration: none;
+        float: left;
+        color: #898989;
+        border: 1px solid #999;
+        line-height: 30px;
+        text-align: center;
+        margin:16px 5px 0 5px;
+    }
+    .f-disable {
+        background-color:#eee;
+        color: #fff;
+		 border: 1px solid #ccc;
+    }
+    .u-leftB {
+    }
+    .u-rightB {
+    }
+    .u-nav {
+        float: left;
+        position:relative;
+        height:68px;
+        overflow:hidden;
+    }
+    .u-nav ul {
+        margin: 0;
+        padding: 0;
+        position:absolute;
+    }
+    .u-nav li {
+        display: inline-block;
+        float: left;
+        margin: 5px;
+    }
+    .u-nav a {
+        position: relative;
+        display: block;
+        height: 56px;
+        line-height: 56px;
+        width: 205px;
+        border: 1px dashed #d1cfcf;
+        background-color: #d7f3ff;
+        color: #000;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+    }
+    .u-nav a.f-sel {
+        background-color: #4288C3;
+        color: #fff;
+        border-color: #D7F3FF;
+        font-size: 16px;
+        font-weight: bold;
+    }

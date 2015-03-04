@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>myGrid</title>
+<link href="myGrid.css" rel="stylesheet" type="text/css" />
+<script src="myGrid.js" ></script>
+
+ <link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+<script language="javascript">
+window.onload =  function(){
+	var data = {
+					title:{name:"文件名称",size:"大小",date:"时间"},
+					content:[
+						{name:"JavaScript DOM 编程艺术计.pdf",size:"23k",date:"2010.9.17"},
+						{name:"JavaScript 权威指南.pdf",size:"25k",date:"2010.9.17"},
+						{name:"javascript程序设计.pdf",size:"23k",date:"2010.9.17"},
+						{name:"悟透javascript.pdf",size:"25k",date:"2010.9.17"},
+						{name:"javascript征途.pdf",size:"26k",date:"2010.9.17"},
+						{name:"王者归来.pdf",size:"26k",date:"2010.9.17"}
+ 						]
+				};
+				
+	new myGrid({id:"myGrid1",data:data});
+}
+</script>
+
+</head>
+
+<body>
+<div class="codeBox" style="margin-top:10px; ">
+	<div id="myGrid1" ></div>
+</div>
+<div class="codeBox" style="margin-top:10px;">
+<pre>
+<code class="language-markup">
+     &lt;div id="myGrid1" &gt;&lt;/div&gt;
+</code>
+<code class="language-javascript">
+    /*
+    封装为 javascript 插件
+    使用方法
+    */
+    window.onload =  function(){
+        var data = {
+                        title:{name:"文件名称",size:"大小",date:"时间"},
+                        content:[
+                            {name:"JavaScript DOM 编程艺术计.pdf",size:"23k",date:"2010.9.17"},
+                            {name:"JavaScript 权威指南.pdf",size:"25k",date:"2010.9.17"},
+							......
+                            ]
+                    };
+				
+		new myGrid({id:"myGrid1",data:data});
+	}
+</code>
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<table id="tt" class="easyui-datagrid" data-options="fitColumns: true,singleSelect: true, rownumbers: true,onBeforeEdit: function(index, row) { Grid.event.onBeforeEdit(index, row, '#'+this.id)},onAfterEdit: function(index, row) {Grid.event.onAfterEdit(index, row, '#'+this.id) },onCancelEdit: function(index, row) {Grid.event.onCancelEdit(index, row, '#'+this.id)},fit: true, pagination: true, pageSize: 10,pageNumber: 1,idField: 'code'">
+    <thead>
+        <tr>
+            <th data-options="field:'code',width:100, editor: 'text'">编号</th>
+            <th data-options="field:'name',width:100, editor: 'text'">姓名</th>
+            <th data-options="field:'addr',width:100, editor: 'text'">地址</th>
+            <th data-options="field:'action',width:100, formatter: function(value, row, index) {return Grid.rowActionFromat(value, row, index,'#tt'); }">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>name1</td>
+            <td>2323</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>name1</td>
+            <td>2323</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>name1</td>
+            <td>2323</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>name1</td>
+            <td>2323</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>name1</td>
+            <td>2323</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<script>
+//window窗体内容加载后执行
+
+function load_tt($win, $href) {
+    var $grid = $("#tt");
+    var $winBody = $win.window("body");
+    $grid.datagrid("resize", {
+        height: $winBody.height(),
+    });
+    $grid.datagrid("getPanel").css("border", "0");
+}
+
+//window窗体关闭执行
+
+function close_tt($win, $href) {
+
+    //alert("tt is  close");
+}
+</script>

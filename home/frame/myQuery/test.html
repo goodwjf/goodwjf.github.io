@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>模仿jquery</title>
+<style>
+.main{border: 1px dashed #ccc; width: 700px; padding: 10px; margin:50px auto; }
+.bb{ background-color:#D7F3FF; border:1px solid #fff; text-align: center;}
+ p{margin-left: 20px; line-height: 30px;}
+
+</style>
+<script src="myQuery.js"></script>
+
+ <link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+<script>
+$(function(){
+  	  $(".bb").css("width","300px");
+	 
+  	  $(".bb").eq(1).css({"height":"100px","border":"1px dashed red","lineHeight":"100px"});
+	
+});
+
+</script>
+</head>
+<body>
+<div class="main">
+	<p>自定义框架 <a href="myQuery.js" title="点击下载">myQuery.js</a></p>
+<div class="bb" id="div1">a</div>
+<div class="bb" id="div2">myQuery(模仿jquery)</div>
+<div class="bb" id="div3">c</div>
+<div class="bb" id="div4">d</div>
+<div class="bb" id="div5">e</div>
+
+</br>
+<div class="codeBox" style="margin-top:10px; width:100%;">
+<pre>
+<code class="language-javascript">
+    /*
+    自定义 myQuery 库
+    使用方法
+    */
+    $(document).ready(function(){
+      $("div").css("width","300px");
+  	  $(".bb").eq(1).css({"lineHeight":"100px","height":"100px","border":"1px solid #ccc"});
+    })
+</code>
+</pre>
+</div>
+ 
+</div>
+</body>
+</html>

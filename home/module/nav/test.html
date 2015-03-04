@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>弹性运动+摩擦</title>
+<style>
+#menu{ position:relative; margin:auto; overflow:hidden; width:560px; padding:0;}
+#menu li { width:98px; text-align:center;  position:relative; z-index:2; list-style:none; float:left;}
+#menu li span{ width:88px; display:block; line-height:28px; text-align:center; height:28px; border:1px solid #CCC; }
+#menu li.bg{ position:absolute; z-index:1; width:89px; height:5px; bottom:0; background:#F00; border:none;  left:0;}
+</style>
+<script>
+window.onload = function(){
+ 	var oUl = document.getElementById("menu");
+ 	var aLi = oUl.getElementsByTagName("li");
+ 	var bgObj = aLi[aLi.length -1];
+ 	
+ 		for(var i = 0; i< aLi.length-1; i++){
+			var obj = aLi[i];
+  				obj.onmouseover = function(){
+  					startMove(bgObj,this.offsetLeft)					
+				}
+ 				
+		}
+ 	
+	var speed = 0;	
+	var left = 0;
+	function startMove(obj,iTarget){
+		
+						clearInterval(obj.timer);
+						obj.timer = setInterval(function(){
+ 								speed += ( iTarget - obj.offsetLeft)/5
+								speed *= 0.7;
+  								left +=	speed;
+ 								
+  								if( Math.abs(left-iTarget) < 1 && Math.asin(speed) < 1){
+									clearInterval(obj.timer);
+									obj.style.left = iTarget+"px";
+ 								}else{
+ 									obj.style.left = left+"px";
+												document.getElementById("printDiv").innerHTML = (left+":" + iTarget+":" + speed);
+ 								}
+  						},30)
+	}
+	
+}
+</script>
+
+</head>
+
+<body>
+<!--需要注意的低分 li之间不能有间隙 如 margin 这样会影响动画定位 这里span 就是为了更好的实现 item 之间的间隔--> <ul id="menu">
+ 	<li><span>首页</span></li>
+    <li><span>产品</span></li>
+    <li><span>介绍</span></li>
+    <li><span>新闻</span></li>
+    <li><span>关于</span></li>
+    <li class="bg"></li>
+ </ul>
+ <div id="printDiv" style="margin-top:100px; display:none"></div>
+</body>
+</html>

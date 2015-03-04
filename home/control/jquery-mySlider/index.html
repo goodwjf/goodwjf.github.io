@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="mySlider.js"></script>
+<link rel="stylesheet" type="text/css" href="mySlider.css"/>
+
+ <link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+
+<style>
+#c {
+	clear:both;
+	border:1px solid #ccc;
+	padding:2px;
+	width:50px;
+	text-align:center;
+	background-color:#eee;
+	cursor:pointer;
+	color:#333;
+	font-size:12px;
+	margin:20px;
+	 
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	var timer1 = $(".timer").mySlider({width:540,itemWidth:100,isMultiple:false,selectIndex:2 });
+	$("#c").click(function(){alert(timer1[0].getValue())});  
+})
+
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<div class="codeBox" style="margin-top:30px;">
+ 
+<div class="timer" id="timer1" style="margin:10px;">
+  <div class="leftD">&nbsp;</div>
+  <div  class="centerOuter" >
+    <div class="centerInner">
+      <div id="div1">9月5日 星期一 19:30</div>
+      <div>9月6日 星期二 19:30</div>
+      <div>9月7日 星期三 19:30</div>
+      <div>9月8日 星期四 19:30</div>
+      <div>9月9日 星期五 19:30</div>
+      <div>9月10日 星期六 19:30</div>
+      <div>9月11日 星期日 19:30</div>
+    </div>
+  </div>
+  <div class="rightD">&nbsp;</div>
+</div> 
+<div id="c" style="">测试</div>
+
+</div>
+<div class="codeBox" style="margin-top:10px;">
+<pre>
+<code class="language-markup">
+     &lt;div class="timer" id="timer1"&gt;
+      &lt;div class="leftD"&gt;&nbsp;&lt;/div&gt;
+      &lt;div  class="centerOuter" &gt;
+        &lt;div class="centerInner"&gt;
+          &lt;div id="div1"&gt;9月5日 星期一 19:30&lt;/div&gt;
+          &lt;div&gt;9月6日 星期二 19:30&lt;/div&gt;
+          &lt;div&gt;9月7日 星期三 19:30&lt;/div&gt;
+          ......
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="rightD"&gt;&nbsp;&lt;/div&gt;
+    &lt;/div&gt; 
+    &lt;div id="c" style=""&gt;测试&lt;/div&gt;
+</code>
+<code class="language-javascript">
+    /*
+    封装为 jquery 插件
+    使用方法
+    */
+    $(document).ready(function(){
+        var timer1 = $(".timer").mySlider({width:540,itemWidth:100,isMultiple:false,selectIndex:2 });
+        $("#c").click(function(){alert(timer1[0].getValue())});  
+    })
+</code>
+</pre>
+</div>
+
+</body>
+</html>

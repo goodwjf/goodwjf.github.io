@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body, ul, li {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+}
+.divselect ul, li {
+	list-style: none;
+}
+.divselect {
+	width: 195px;
+	position: relative;
+	z-index: 2;
+}
+.divselect cite {
+	width: 161px;
+	height: 21px;
+	line-height: 21px;
+	display: block;
+	color: #807a62;
+	cursor: pointer;
+	font-style: normal;
+	padding-left: 4px;
+	padding-right: 30px;
+	border: 1px solid #cccccc;
+	background: url(select-right.png) no-repeat right center;
+}
+.divselect ul {
+	width: 195px;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;
+	position: absolute;
+	z-index: 3;
+	margin-top: -1px;
+	display: none;
+}
+.divselect ul li {
+	height: 21px;
+	line-height: 21px;
+}
+.divselect ul li a {
+	display: block;
+	height: 21px;
+	color: #333333;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.divselect ul li a:hover {
+	background-color: #CCC;
+}

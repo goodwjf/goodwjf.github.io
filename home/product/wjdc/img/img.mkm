@@ -1,0 +1,8 @@
+<MKM version="2.0" imageFileUrl="file:///Users/wangjianfenga1/Project/work/%E9%97%AE%E5%8D%B7%E8%B0%83%E6%9F%A5/img/img.jpg">
+  <Marks>
+    <ColorMark defaultDirection="9" colorSystem="hex" direction="9" color="16711680" targetColor="9002308" offsetX="25" offsetY="10" x="39" y="88"/>
+    <RectMark color="16711680" x="42" y="71" offsetX="0" offsetY="0"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="31" y="50" textMaxWidth="100" offsetX="25" offsetY="10" text="说明..."/>
+    <LengthMark direction="12" color="16711680" length="71" x="9" y="41"/>
+  </Marks>
+</MKM>

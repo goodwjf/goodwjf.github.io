@@ -1,0 +1,53 @@
+<table id="tt2"></table>
+<script>
+// 字段配置
+Config.tt2_field = [
+
+    [{
+        field: 'name',
+        title: 'Name',
+        width: 120,
+        editor: 'text'
+    }, {
+        field: 'addr',
+        title: 'Address',
+        width: 220,
+        editor: 'text'
+
+    }, {
+        field: 'code',
+        title: 'code',
+        width: 150,
+        editor: 'text'
+    }, {
+        field: 'action',
+        title: '操作',
+        width: 100,
+        formatter: function(value, row, index) {
+            return Grid.rowActionFromat(value, row, index, "#tt2")
+        }
+    }]
+];
+
+
+//window窗体内容加载后执行
+
+function load_tt2($win, $href) {
+    var $winBody = $win.window("body");
+    var options = {
+        width: $winBody.width(),
+        height: $winBody.height(),
+        url: 'js/datagrid_data.json',
+        idField: 'name',
+        fit: true
+    };
+    Grid.createGrid("#tt2", $win, options);
+}
+
+//window窗体关闭执行
+
+function close_tt2($win, $href) {
+
+    //alert("tt is  close");
+}
+</script>

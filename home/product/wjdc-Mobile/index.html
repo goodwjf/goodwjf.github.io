@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>产品调查</title>
+<!--
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+-->
+
+<link href="jquery.mobile-1.3.1.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.9.1.min.js"></script>
+<script>
+$(document).bind('mobileinit',function(){
+	//	$.mobile.selectmenu.prototype.options.nativeMenu = false;
+}); 
+
+</script>
+<script src="jquery.mobile-1.3.1.min.js"></script>
+
+<style>
+.header h1 {
+	color: #222222;
+	min-height: 32px;
+	padding: 10px 0 0 10px;
+	font-size: 14px;
+}
+.num {
+	color: #D68162;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	margin-right: 5px;
+}
+.con-img {
+	display: block;
+	margin: 0 auto 10px;
+	max-width: 100%;
+}
+.jz-pro .ui-btn-up-c {
+	background: none repeat scroll 0 0 hsl(0, 0%, 98%);
+	border: 1px solid hsl(0, 0%, 98%);
+}
+.jz-pro .ui-btn-hover-c {
+	background: none repeat scroll 0 0 hsl(0, 0%, 98%);
+	border: 1px solid hsl(0, 0%, 98%);
+}
+.jz-pro-box .ui-collapsible-content {
+	padding: 0;
+}
+.jz-pro-box .ui-controlgroup {
+	margin: 0;
+}
+
+
+.score .ui-radio,.score .ui-corner-left, .score .ui-corner-right, .color .ui-corner-left, .color .ui-corner-right {
+    border-radius: 0 0 0 0;
+}
+
+.score .ui-btn{
+	border-right-width: 1px;
+
+}
+.score .ui-radio {
+    width: 20%;
+}
+.score .ui-btn {
+    width: 100%;
+}
+.score .ui-btn-inner {
+    padding: 0.6em 0;
+}
+
+
+.ui-btn-text img{ width:100%;}
+</style>
+</head>
+<body>
+<div data-role="page" id="page0">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+    	<div style="text-align:center; font-size:16px; font-weight:bold;">
+      	   <p>欢迎参与，</p>
+           <p> 同时非常感谢支持本次问卷调查！<p>
+        </div>   
+    </div>
+    <a href="#page2" data-role="button" data-theme="e">点击开始</a> </div>
+  <div class="footer"> </div>
+</div>
+
+
+<div data-role="page" id="page1">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q1</span>纵向一列单选题</legend>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+        <label for="radio-choice-1">选项1</label>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+        <label for="radio-choice-2">选项2</label>
+        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+        <label for="radio-choice-3">选项3</label>
+        <!--
+        	<input type="radio" name="radio-choice" id="radio-choice-5" value="choice-5" />
+       		<label for="radio-choice-5"> 其他
+        	<input type="text" name="name" id="basic" value=""  class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset myTxtInput" style="" />
+        	</label>
+        -->
+      </fieldset>
+    </div>
+    <a href="#page2" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page2">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q2</span>纵向2列多选题</legend>
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+      </fieldset>
+    </div>
+    <a href="#page3" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page3">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q3</span>纵向2列单选题</legend>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+        <label for="radio-choice-1">选项1</label>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+        <label for="radio-choice-2">选项2</label>
+        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+        <label for="radio-choice-3">选项3</label>
+        <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-2" />
+        <label for="radio-choice-4">选项4</label>
+        <input type="radio" name="radio-choice" id="radio-choice-5" value="choice-3" />
+        <label for="radio-choice-5">选项5</label>
+        <input type="radio" name="radio-choice" id="radio-choice-6" value="choice-6" />
+        <label for="radio-choice-6" class="myTxtInput">其他
+          <input  type="text" name="name"  value="" style="font-size:13px;display:inline-block;position:relative; left:3px;"  />
+        </label>
+      </fieldset>
+    </div>
+    <a href="#page4" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page4">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q4</span>纵向2列多选题</legend>
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+        <input name="checkbox-v-2d" id="checkbox-v-2d" type="checkbox">
+        <label for="checkbox-v-2d">选项2</label>
+        <input name="checkbox-v-2e" id="checkbox-v-2e" type="checkbox">
+        <label for="checkbox-v-2e">选项3</label>
+        <input name="checkbox-v-2f" id="checkbox-v-2f" type="checkbox">
+        <label for="checkbox-v-2f" class="myTxtInput">其他
+          <input  type="text" name="name"  value="" style="font-size:13px;display:inline-block;position:relative; left:3px;"  />
+        </label>
+      </fieldset>
+    </div>
+    <a href="#page5" data-role="button" data-theme="e" >下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page5">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q5</span>纵向2列单选题</legend>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+        <label for="radio-choice-1">选项1</label>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+        <label for="radio-choice-2">选项2</label>
+        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+        <label for="radio-choice-3">选项3</label>
+        <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-2" />
+        <label for="radio-choice-4">选项4</label>
+        <input type="radio" name="radio-choice" id="radio-choice-5" value="choice-1" checked="checked" />
+        <label for="radio-choice-5">选项5</label>
+        <input type="radio" name="radio-choice" id="radio-choice-6" value="choice-2" />
+        <label for="radio-choice-6">选项6</label>
+        <input type="radio" name="radio-choice" id="radio-choice-7" value="choice-3" />
+        <label for="radio-choice-7">选项7</label>
+        <input type="radio" name="radio-choice" id="radio-choice-8" value="choice-2" />
+        <label for="radio-choice-8">选项8</label>
+        <input type="radio" name="radio-choice" id="radio-choice-9" value="choice-3" />
+        <label for="radio-choice-9">选项9</label>
+        <input type="radio" name="radio-choice" id="radio-choice-10" value="choice-6" />
+        <label for="radio-choice-10" class="myTxtInput">其他
+          <input  type="text" name="name"  value="" style="font-size:13px;display:inline-block;position:relative; left:3px;"  />
+        </label>
+      </fieldset>
+    </div>
+    <a href="#page6" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page6">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q6</span>纵向3列多选题</legend>
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+        <input name="checkbox-v-2d" id="checkbox-v-2d" type="checkbox">
+        <label for="checkbox-v-2d">选项4</label>
+        <input name="checkbox-v-2e" id="checkbox-v-2e" type="checkbox">
+        <label for="checkbox-v-2e">选项5</label>
+        <input name="checkbox-v-2f" id="checkbox-v-2f" type="checkbox">
+        <label for="checkbox-v-2f">选项6</label>
+        <input name="checkbox-v-2g" id="checkbox-v-2g" type="checkbox">
+        <label for="checkbox-v-2g">选项7</label>
+        <input name="checkbox-v-2h" id="checkbox-v-2h" type="checkbox">
+        <label for="checkbox-v-2h">选项8</label>
+        <input name="checkbox-v-2i" id="checkbox-v-2i" type="checkbox">
+        <label for="checkbox-v-2i">选项9</label>
+        <input name="checkbox-v-2j" id="checkbox-v-2j" type="checkbox">
+        <label for="checkbox-v-2j" class="myTxtInput">其他
+          <input  type="text" name="name"  value="" style="font-size:13px;display:inline-block;position:relative; left:3px;"  />
+        </label>
+      </fieldset>
+    </div>
+    <a href="#page7" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page7">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q7</span>纵向3列多选题</legend>
+        <label for="selectmenu" class="select"> </label>
+        <select name="selectmenu" id="selectmenu">
+          <option value="">请选择</option>
+          <option value="option1">选项 1</option>
+          <option value="option2">选项 2</option>
+          <option value="option3">选项 3</option>
+        </select>
+      </fieldset>
+    </div>
+    <a href="#page8" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page8">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q8</span>纵向一列单选图片题</legend>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+        <label for="radio-choice-1">选项1<img src="images/a.jpg" ></label>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+        <label for="radio-choice-2">选项2<img src="images/a.jpg"></label>
+        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+        <label for="radio-choice-3">选项3<img src="images/a.jpg"></label>
+      </fieldset>
+    </div>
+    <a href="#page9" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page9">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q9</span>纵向多选图片题</legend>
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1<img src="images/a.jpg"></label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2<img src="images/a.jpg"></label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3<img src="images/a.jpg"></label>
+      </fieldset>
+    </div>
+    <a href="#page10" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page10">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content"> <span class="num">Q10</span>矩阵单选题（每行单选）
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题1</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+          <input type="radio" name="radio1" id="radio1_0" value="" />
+          <label for="radio1_0">选项</label>
+          <input type="radio" name="radio1" id="radio1_1" value="" />
+          <label for="radio1_1">选项</label>
+          <input type="radio" name="radio1" id="radio1_2" value="" />
+          <label for="radio1_2">选项</label>
+        </fieldset>
+      </div>
+    </div>
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题2</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+          <input type="radio" name="radio2" id="radio1_0" value="" />
+          <label for="radio1_0">选项</label>
+          <input type="radio" name="radio2" id="radio1_1" value="" />
+          <label for="radio1_1">选项</label>
+          <input type="radio" name="radio2" id="radio1_2" value="" />
+          <label for="radio1_2">选项</label>
+        </fieldset>
+      </div>
+    </div>
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题3</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+          <input type="radio" name="radio3" id="radio1_0" value="" />
+          <label for="radio1_0">选项</label>
+          <input type="radio" name="radio3" id="radio1_1" value="" />
+          <label for="radio1_1">选项</label>
+          <input type="radio" name="radio3" id="radio1_2" value="" />
+          <label for="radio1_2">选项</label>
+        </fieldset>
+      </div>
+    </div>
+  
+  <a href="#page11" data-role="button" data-theme="e">下一页</a> </div>
+<div class="footer"> </div>
+</div>
+<div data-role="page" id="page11">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content"> <span class="num">Q11</span>矩阵多选题（每行多选）
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题1</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+        </fieldset>
+      </div>
+    </div>
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题1</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+        </fieldset>
+      </div>
+    </div>
+    <div data-role="collapsible" data-collapsed="false" data-content-theme="c" data-theme="c"  class="jz-pro-box">
+      <h3>子问题1</h3>
+      <div class="jz-pro">
+        <fieldset data-role="controlgroup" data-inset="false">
+        <input name="checkbox-v-2a" id="checkbox-v-2a" type="checkbox">
+        <label for="checkbox-v-2a">选项1</label>
+        <input name="checkbox-v-2b" id="checkbox-v-2b" type="checkbox">
+        <label for="checkbox-v-2b">选项2</label>
+        <input name="checkbox-v-2c" id="checkbox-v-2c" type="checkbox">
+        <label for="checkbox-v-2c">选项3</label>
+        </fieldset>
+      </div>
+    </div>
+  
+  <a href="#page12" data-role="button" data-theme="e">下一页</a> </div>
+<div class="footer"> </div>
+</div>
+<div data-role="page" id="page12">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q12</span>单行文本题</legend>
+             <label for="textinput2">胸围:</label>
+          	 <input type="text" name="textinput" id="textinput" value=""/>
+             <label for="textinput2">腰围:</label>
+             <input type="text" name="textinput2" id="textinput2" value=""/>
+             <label for="textinput3">臀围:</label>
+             <input type="text" name="textinput3" id="textinput3" value=""/>
+       </fieldset>
+    </div>
+    <a href="#page13" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+<div data-role="page" id="page13">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q13</span>多行文本题</legend>
+            <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+       </fieldset>
+    </div>
+    <a href="#page14" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+
+<div data-role="page" id="page14">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+<!--  <div id="topcontent">
+    <div class="ad"><a target="_blank" href="http://www.diaoyanbao.com/?ad=3" id="goto_ad3" class="ui-link"><img class="con-img" src="images/adpic.gif"></a></div>
+  </div>
+-->  <div data-role="content">
+<!-- 
+    <div data-role="fieldcontain" class="score">
+      <fieldset data-role="controlgroup" data-type="horizontal"  data-theme="c">
+        <legend> <span class="num">Q14</span>多行文本题</legend>
+        <input type="radio" name="radio4" id="radio4_0" value="" />
+        <label for="radio4_0">1</label>
+        <input type="radio" name="radio4" id="radio4_1" value="" />
+        <label for="radio4_1">2</label>
+        <input type="radio" name="radio4" id="radio4_2" value="" />
+        <label for="radio4_2">3</label>
+        <input type="radio" name="radio4" id="radio4_3" value="" />
+        <label for="radio4_3">4</label>
+        <input type="radio" name="radio4" id="radio4_4" value="" />
+        <label for="radio4_4">5</label>
+        <input type="radio" name="radio4" id="radio4_5" value="" />
+        <label for="radio4_5">6</label>
+        <input type="radio" name="radio4" id="radio4_6" value="" />
+        <label for="radio4_6">7</label>
+        <input type="radio" name="radio4" id="radio4_7" value="" />
+        <label for="radio4_7">8</label>
+        <input type="radio" name="radio4" id="radio4_8" value="" />
+        <label for="radio4_8">9</label>
+        <input type="radio" name="radio4" id="radio4_9" value="" />
+        <label for="radio4_9">10</label>
+      </fieldset>
+       </div>-->
+ 
+      
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup">
+        <legend> <span class="num">Q14</span>打分题</legend>
+        <label for="grade1" class="select"> </label>
+        <select name="grade1" id="grade1">
+          <option value="">请选择</option>
+          <option value="option1">1分</option>
+          <option value="option2">2分</option>
+          <option value="option3">3分</option>
+          <option value="option1">4分</option>
+          <option value="option2">5分</option>
+          <option value="option3">6分</option>
+          <option value="option1">7分</option>
+          <option value="option2">8分</option>
+          <option value="option3">9分</option>
+          <option value="option3">10分</option>
+        </select>
+      </fieldset>
+    </div>
+      
+    
+<a href="#page15" data-role="button" data-theme="e">下一页</a> </div>
+  <div class="footer"> </div>
+</div>
+
+
+
+
+
+<div data-role="page" id="page15">
+  <div class="header">
+    <h1>产品调查 - 产品购买习惯调查模板</h1>
+  </div>
+  <div data-role="content">
+       
+    <div data-role="fieldcontain">
+      <fieldset data-role="controlgroup" id="sort15">  
+        <legend> <span class="num">Q15</span>排序题</legend>
+         <select name="selectmenu2" id="selectmenu2">
+          <option value="option1" >请选择第一位</option>
+          <option value="option2" >请选择第二位</option>
+          <option value="option3">请选择第三位</option>
+        </select>
+       <select name="selectmenu3" id="selectmenu3">
+          <option value="option1">请选择第一位</option>
+          <option value="option2" >请选择第二位</option>
+          <option value="option3">请选择第三位</option>
+        </select>
+         <select name="selectmenu4" id="selectmenu4">
+          <option value="option1">请选择第一位</option>
+          <option value="option2">请选择第二位</option>
+          <option value="option3" >请选择第三位</option>
+        </select>
+      </fieldset>
+    </div>
+  <a href="#" data-role="button" data-theme="e" id="reset" >重置</a>  
+  <a href="#" data-role="button" data-theme="e" id="submit">提交</a> </div>
+  <div class="footer"> </div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>

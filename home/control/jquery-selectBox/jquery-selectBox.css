@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+.form-selectBox {
+	overflow: hidden;
+	zoom: 1;
+	width: 332px;
+}
+.form-selectBox label {
+	width: 71px;
+	height: 51px;
+	line-height: 51px;
+	border: 1px solid #ccc;
+	background-color: #d9eeff;
+	display: inline-block;
+	float: left;
+	margin: 10px 10px 0 0;
+	text-align: center;
+	color: #555;
+	text-decoration: none;
+	cursor:pointer;
+	font-size:12px;
+	border-radius:5px;
+}
+.form-selectBox label input{
+	display:none;
+}
+.form-selectBox label.selected {
+ 	color: #fff;
+	background:#4288c3 url(icon-duigou.gif) 54px 36px no-repeat;
+}
+
+

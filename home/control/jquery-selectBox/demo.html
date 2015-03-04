@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>selectBox</title>
+<link href="jquery-selectBox.css" rel="stylesheet" type="text/css" />
+ <link href="../../../prism/prism.css" rel="stylesheet" />
+<script src="../../../prism/prism.js"></script>
+<style>
+#main{ width:394px; margin:auto; overflow:hidden; }
+#box1{ float:left;} 
+#aBut{ font-size:12px; display:inline-block;   color:#00A1BE; text-decoration:none; border:1px solid #00A1BE; width:60px; text-align:center; line-height:24px; height:24px; float:right; margin-top:98px; }
+</style>
+
+</head>
+
+<body>
+<div id="main">
+<div class="form-selectBox" id="box1">
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_0" />
+    候选人供应</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_1" />
+    项目管理</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_2" />
+    客户管理</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_3" />
+    合同管理</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_4" />
+    人才库</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_5" />
+    人才交换</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_6" />
+    渠道发布</label>
+  <label class="radius_all">
+    <input type="checkbox" name="aaaa" value="复选框" id="aaaa_7" />
+    人脉管理</label>    
+</div>
+<a href="javascript:;" id="aBut">测试</a> 
+</div>
+<script language="javascript" src="jquery-1.9.1.min.js"></script> 
+<script language="javascript" src="jquery-selectBox.js"></script> 
+<script>
+$(function(){
+ $("#box1").iniFormSelectBox();
+	$("#aBut").click(function(){
+		 var t = $(".form-selectBox input:checked").length;
+		alert("选中"+t+"个");
+	});
+		
+});
+</script>
+
+<div class="codeBox" style="margin-top:10px;">
+<pre>
+<code class="language-markup">
+ &lt;div class="form-selectBox" id="box1"/&gt;
+  &lt;label class="radius_all"/&gt;
+    &lt;input type="checkbox" name="aaaa" value="复选框" id="aaaa_0" /&gt;
+    候选人供应&lt;/label/&gt;
+  &lt;label class="radius_all"/&gt;
+    &lt;input type="checkbox" name="aaaa" value="复选框" id="aaaa_1" /&gt;
+    项目管理&lt;/label/&gt;
+ 	......  
+&lt;/div&gt;
+</code>
+<code class="language-javascript">
+    /*
+    封装为 jquery 插件
+    使用方法
+    */
+    $(function(){
+        $("#box1").iniFormSelectBox();
+        $("#aBut").click(function(){
+             var t = $(".form-selectBox input:checked").length;
+            alert("选中"+t+"个");
+        });
+            
+    });
+</code>
+</pre>
+</div>
+</body>
+</html>

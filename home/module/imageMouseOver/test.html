@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+#ul1 {
+	width: 666px;
+	height: 408px;
+	zoom: 1;
+	margin: 100px auto;
+	position: relative;
+}
+#ul1:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0;
+}
+#ul1 li {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #999;
+	margin: 10px;
+	float: left;
+	list-style: none;
+	z-index:0;
+	opacity:0.2;
+ 
+}
+.bgRed {
+	background-color: #F00;
+}
+.bgGreen {
+	background-color: #0F0;
+}
+.bgYellow {
+	background-color: #FF0
+}
+</style>
+<script src="move2.js"></script>
+<script>
+window.onload = function(){
+	var oUl = document.getElementById("ul1");
+	var aLis =	oUl.getElementsByTagName("li");
+	var _zIndex = 1
+
+	for(var i = 0; i< aLis.length; i++){
+		
+		var _obj = aLis[i];
+	
+		_obj.style.left = _obj.offsetLeft + "px";
+		_obj.style.top = _obj.offsetTop + "px";
+  		
+		_obj.onmouseover = function(){
+			this.style.zIndex = _zIndex++;
+ 			startMove(this,{width:300,height:300,marginLeft:-50,marginTop:-50,opacity:100})
+   		}
+		_obj.onmouseout = function(){
+			startMove(this,{width:200,height:200,marginLeft:0,marginTop:0,opacity:20})
+  		}
+	}
+	
+	for(var i = 0; i<aLis.length; i++){
+		aLis[i].style.position ="absolute"	
+		aLis[i].style.margin = 0;
+	}
+	
+}
+
+ </script>
+</head>
+
+<body>
+
+<ul id="ul1">
+  <li class="bgRed"></li>
+  <li class="bgGreen"></li>
+  <li class="bgYellow"></li>
+  <li class="bgRed"></li>
+  <li class="bgGreen"></li>
+  <li class="bgYellow"></li>
+</ul>
+ 
+</body>
+</html>

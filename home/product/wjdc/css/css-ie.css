@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.no-opacity .content {
+	filter: alpha(opacity=90);
+	zoom: 1;
+}
+.oneRows li {
+	_width: 0;
+	_white-space: nowrap;
+}
+.qImg li {
+	*overflow: hidden;
+	*zoom: 1;
+}
+.qImg li input {
+	*float: left;
+}
+.qImg li dl {
+	*float: left;
+}
+.rateBox {
+	*overflow: hidden;
+	*zoom: 1;
+	*vertical-align:baseline;
+}
+.rateBox span {
+	*float:left;
+
+}
+.rateBox .bBorder {
+	*float:left;
+ 
+}
+
+.rateBox .rateLine {
+	*font-size:9px;
+}

@@ -1,0 +1,35 @@
+<form class="u-fm">
+    <p>
+    <label>下拉框:</label>
+    <select id="cc" class="easyui-combobox" name="dept" style="width:200px;">
+        <option value="aa">aitem1</option>
+        <option>bitem2</option>
+        <option>bitem3</option>
+        <option>ditem4</option>
+        <option>eitem5</option>
+    </select>
+    </p>
+    <p>
+    <label>日期框:</label>
+    <input id="dd" type="text" class="easyui-datebox" ></input>
+    </p>
+    <p>
+    <label>文本框:</label>
+    <input id="vv" class="easyui-validatebox" data-options="required:true,validType:'email'" />
+    </p>
+    <p style="text-align:center;">
+    <a id="submit1" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">提 交</a>  
+    <a id="close1" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取 消</a>  
+    </p>
+</from>
+
+<script >
+function load_dd($win, $menu){
+    //alert("dd open")
+}
+
+function close_dd($win, $menu){
+    //alert("dd close")
+}
+ 
+</script>
