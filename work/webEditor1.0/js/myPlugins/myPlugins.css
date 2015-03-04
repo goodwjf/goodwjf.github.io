@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+.ke-content {
+	word-wrap: break-word;
+	/* 	word-break设置强行换行;normal 亚洲语言和非亚洲语言的文本规则，允许在字内换行
+*/	word-break: normal;
+}
+.focusBorder {
+	border: 1px solid #008810;
+	box-shadow: 0 0 6px #ccc
+}
+.ke-icon-table2 {
+	background-position: 0px -784px;
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-sign {
+	background-image: url(default.png);
+	background-position: 0px -304px;
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-time {
+	background-image: url(default.png);
+	background-position: 0px -320px;
+	width: 16px;
+	height: 16px;
+}
+.ke-icon-template {
+	background-image: url(default.png);
+	background-position: 0px -976px;
+	width: 16px;
+	height: 16px;
+}
+.signList {
+	height: 250px;
+	width: 100%;
+	overflow-y: scroll;
+}
+.signList ul {
+	padding: 0;
+	margin: 5px 10px;
+}
+.signList li {
+	padding: 0;
+	list-style: none;
+}
+.signList a {
+	display: block;
+	width: 98%;
+	color: #666;
+	padding: 5px 0;
+	padding-left: 2%;
+	border: 1px solid #fff;
+}
+.signList a span {
+	display: inline-block;
+	width: 26px;
+}
+.signList a:hover {
+	background-color: #eee;
+	color: #4C4C4C;
+	border: 1px solid #5690D2;
+	background-color: #E9EFF6;
+}
+.but {
+	margin-top: 2px;
+	display: block;
+	cursor:pointer;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+	float: right;
+	background: url(editor_v1.png) no-repeat -352px -112px;
+}
+.but_sim{
+	margin-top: 2px;
+	display: block;
+	cursor:pointer;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+	float: right;
+	background: url(editor_v1.png) no-repeat -96px -160px;
+ } 
+
