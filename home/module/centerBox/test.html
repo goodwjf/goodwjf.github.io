@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style type="text/css">
+.outer{ border: 1px dashed red;  padding: 10px 0; }
+.inner{ border: 1px dotted red;   overflow: hidden;margin:0 auto; background-color: #fff;}
+.inner a{ display: inline-block; text-decoration: none; float: left; border-color: #fff;border-style: solid; border-width: 1px; background-color:#eee;  text-align: center; color: red;}
+.tip{ font-size: 12px; color: red; position: absolute; bottom: 20px;right: 20px;}
+em{ font-size: 14px; font-weight: bold; font-style: normal;}
+        </style>
+    </head>
+    <body>
+        <div class="outer" id="outer">
+            <div class="inner" id="inner">
+                <a href="#">百度</a>
+                <a href="#">阿里巴巴</a>
+                <a href="#">淘宝</a>
+                <a href="#">京东</a>
+                <a href="#">百度</a>
+                <a href="#">阿里巴巴</a>
+                <a href="#">淘宝</a>
+                <a href="#">京东</a>
+            </div>
+        </div>
+        <br>
+        <p><label>外框：</label><input type="text" value="" size="8" id="reset" >px</p>
+        <input type="button" value="设置" id="update">
+        <div class="tip">
+            <p><em>功能需求</em>：所有按钮等宽、集体居中、自适应不同尺寸屏幕</p>
+            <em>测试</em>： 可以点击按钮编辑按钮文字改变按钮宽带，设置屏幕尺寸（外框），点击设置即可看到效果
+        </div>
+    </body>
+    <script src = "center.js"></script>
+    <script type="text/javascript">
+                function insertEditor(target){
+                    function ev(e){  
+                            target.innerHTML = oInput.value || oInput.getAttribute("data");
+                            target.style.width = "auto";
+                    }
+                    var temp = target.innerHTML;
+                    var oInput = document.createElement("input");
+                        oInput.type = "text";
+                        oInput.size = "8";
+                        oInput.value = "";
+                        oInput.setAttribute("data",temp);
+                        target.innerHTML = "";
+                        target.appendChild(oInput);
+                        oInput.focus();
+
+                        oInput.onblur = ev;
+                        document.onkeydown = function(e){
+                            var e = e || window.event; 
+                            if(e.keyCode == 13){   
+                                
+                                ev();
+                            }     
+                        }
+                      
+                };
+                function stopBubble(e) {
+                    //如果提供了事件对象，则这是一个非IE浏览器
+                    if ( e && e.stopPropagation )
+                        //因此它支持W3C的stopPropagation()方法
+                        e.stopPropagation();
+                    else
+                        //否则，我们需要使用IE的方式来取消事件冒泡
+                        window.event.cancelBubble = true;
+                };
+
+
+                
+        window.onload = function() {
+                var oInner = document.getElementById("inner"),
+                    oOuter = document.getElementById("outer"),
+                    oUpdate = document.getElementById("update"),
+                    oReset = document.getElementById("reset"); 
+                    oInner.onclick = function(e){
+                    var event =  e || window.event,
+                        target = event.target || event.srcElement;
+                        if(target.tagName  == "A"){
+                            insertEditor(target);
+                        }
+                       
+                    };
+                 
+                    oUpdate.onclick = function(){ 
+                        oOuter.style.width = oReset.value +"px";
+                        var Aa = oInner.getElementsByTagName("a");
+                        for (var i = 0; i < Aa.length; i++) {
+                          Aa[i].style.removeProperty("width");
+                        };
+
+
+                        CenterBox.refresh();
+                    };
+                 CenterBox.refresh();    
+       }                 
+    </script>
+</html>
