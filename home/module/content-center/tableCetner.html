@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
-        <title>table-Center</title>
+        <title>相对古老 相对简单的方法</title>
         <style type="text/css">
             /*
                 1、当dom元素设置成绝对定位的时候宽高默认auto（自适应）
@@ -33,9 +33,11 @@
                 .bg{
                     border: 1px dashed red;
                     background-color:rgba(0,0,0,.7); 
+
                 }
                 .box-border{
                     border:1px solid red;
+                    margin:0 10px;
                 }
 
                 .content{ text-align: left;padding: 10px; background-color: #fff}
@@ -43,9 +45,10 @@
         </style>
     </head>
     <body> 
-        <table class="Center-Container bg" cellspacing="0" cellpadding="0" border="0">
+       <!-- 相对古老 相对简单的方法 -->
+        <table class="Center-Container" cellspacing="0" cellpadding="0" border="0">
             <tr>
-                <td class="Center-table-cell">
+                <td class="Center-table-cell bg">
                     <div class="Center-Block">
                         <div class="content box-border" >
                             <strong>需求：</strong>
