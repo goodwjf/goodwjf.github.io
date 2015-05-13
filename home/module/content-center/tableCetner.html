@@ -12,18 +12,23 @@
              */
 
                 /*可让内部元素上下左右居中的容器*/
+
+
                 .Center-Container{
-                    position: absolute;  
+                    /*解决适应不同尺寸的浏览器*/
+                    position: absolute; 
                     top: 0;left: 0;bottom: 0;right: 0;
                    
                     width: 100%; /* auto */
                     height: 100%; /* auto */
                 }
-                .Center-table-cell{
+                .Center-table-cell{  
+                    /*解决上下左右居中的问题*/
                     vertical-align: middle;
                     text-align: center;
                 }
-                .Center-Block { 
+                .Center-Block {  
+                    /*解决自适应宽高的问题*/
                     display: inline-block;             
                 }
 
@@ -37,10 +42,9 @@
                 }
                 .box-border{
                     border:1px solid red;
-                    margin:0 10px;
                 }
 
-                .content{ text-align: left;padding: 10px; background-color: #fff}
+                .content{ text-align: left;padding: 10px;margin:10px; background-color: #fff}
                 .qrcode{ position:absolute; right: 50px; bottom: 50px; padding: 5px;background-color: #fff;}
         </style>
     </head>
@@ -61,7 +65,7 @@
             </tr>
         </table>
         <div class="qrcode">
-        <img src="img/qrcode.png" >
+            <img src="img/qrcode.png" >
         </div>
     </body>
 </html>
