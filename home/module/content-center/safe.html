@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+        <title>危险站点</title>
+        <style type="text/css">
+			body, p {
+			    margin: 0;
+			    padding: 0;
+			}
+			body { 
+			    background-color: #e3e3e3;
+			    font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;	    
+			}
+			.main {
+				  overflow: auto;  
+				    	  
+			}
+			.top {
+			    font-size: 16px;
+			    color: #fff;
+			    background-color: #D63323;
+			    overflow:auto;
+			    padding: 18px 21px;
+			    border-radius: 4px;
+				/*border-top-left-radius:4px;
+				border-top-right-radius:4px; */
+			}
+			.top_icon {
+			    margin: 0 auto 15px auto;
+			    height: 50px;
+			    width: 44px;
+			    background: url(./img/icon.png) no-repeat 0 0;
+			    background-size: 100%;
+
+			}
+			.top_tit {
+			    font-weight: bold;
+			    line-height: 1;
+			}
+			.top_cont {
+			    margin-top: 10px;
+			    line-height: 20px;
+			}
+			.bottom {
+				display: none;
+			    height: 80px;
+			    background-color: #fff;
+			    overflow: hidden;
+			    border-bottom-left-radius:4px;
+				border-bottom-right-radius:4px;
+			}
+			.but {
+			    display: none;
+			    margin: 18px 21px;
+			    text-align: center;
+			    line-height: 45px;
+			    border-radius: 4px;
+			    border: 1px solid #d63323;
+			    font-size: 16px;
+			    color: #d63323;
+			    text-decoration: none;
+			}
+	 
+          	/* .but:active{ color: #B71f11; border-color: #B71f11; background-color: #eaeaea;} */
+
+
+
+        .Center-Container{
+        	position: absolute; 
+        	top: 0;left: 0; bottom: 0; right: 0;
+        	width: 100%; height: 100%;
+        }
+        .Center-Container.is-Table { 
+        	display: table; 
+        }
+        .is-Table .Table-Cell {
+	        display: table-cell;
+	        vertical-align: middle;
+        }
+        .is-Table .Center-Block {
+	        margin: auto 21px;
+        }
+        </style>
+    </head>
+    <body  onorientationchange="">
+    <div class="Center-Container is-Table">
+        <div class="main Table-Cell">
+        	<div class="Center-Block">
+	            <div class="top">
+	                <p class="top_icon"></p>
+	                <p class="top_tit">国家扫黄打非机关提示：</p>
+	                <p class="top_cont">您登录的网站含有大量淫秽色情等违法信息，请勿访问！</p>
+	            </div>
+	            <div class="bottom">
+	                <a href="#" class="but" id="__sogou_mse_safe_close_btn__">关闭网页</a>
+	            </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    	document.addEventListener('touchmove', function(e){e.preventDefault();}, false);
+    </script>
+</html>

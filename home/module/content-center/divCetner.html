@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+        <title>div-Center</title>
+        <style type="text/css">
+        .Center-Container{
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	bottom: 0;
+        	right: 0;
+        	width: 100%;
+        	height: 100%;
+        	border: 1px dashed red;
+        }
+
+
+        .is-Table { /* table*/
+        	display: table;
+        }
+        .is-Table .Table-Cell {  /*table-cell 控制盒子内的 div 上下居中 */
+        	display: table-cell;
+        	vertical-align: middle;
+        }
+        .is-Table .Center-Block { /* 左右居中的部分 宽高度自适应*/
+         
+        	margin:auto 50px;
+        	border:1px solid red; 
+
+        }
+        .content{ text-align: left;padding: 10px;  }
+        </style>
+    </head>
+    <body>
+     	<div class="Center-Container is-Table">
+            <div class="Table-Cell">
+                <div class="Center-Block">
+                    <!-- CONTENT -->
+                    <div class="content">
+                    	<strong>需求：</strong>
+                    	<p>1、提示框居中</p>
+                    	<p>2、左右宽度固定(50px)</p>
+                    	<p>3、宽高自适应</p>
+                    	<p>4、横竖屏自适应</p> 
+                   </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
