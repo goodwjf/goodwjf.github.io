@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+        <title>相对古老 相对简单的方法</title>
+        <style type="text/css">
+            /*
+                1、当dom元素设置成绝对定位的时候宽高默认auto（自适应）
+                2、绝对定位的情况下上下左右4个边距设置成0 等于填充整个父容器
+                3、vertical-align只对行内元素、单元格（table-cell）元素 有效，对块级元素无效
+             */
+
+                /*可让内部元素上下左右居中的容器*/
+
+
+                .Center-Container{
+ 
+                    /*解决适应不同尺寸的浏览器*/
+                    position: fixed; 
+                    top: 0;left: 0;bottom: 0;right: 0;
+                   
+                    width: 100%; /* auto */
+                    height: 100%; /* auto */
+                }
+                .Center-table-cell{  
+                    /*解决上下左右居中的问题*/
+                    vertical-align: middle;
+                    text-align: center;
+                }
+                .Center-Block {  
+                    /*解决自适应宽高的问题*/
+                    display: inline-block;             
+                }
+
+
+                /*内容*/
+                .table-border{
+                    border-collapse:collapse; 
+                    border: 0;
+                }
+                .bg{
+                    border: 1px dashed red;
+                    background-color:rgba(0,0,0,.7); 
+
+                }
+                .box-border{
+                    border:1px solid red;
+                }
+
+                .content{ text-align: left;padding: 10px;margin:10px; background-color: #fff}
+                .qrcode{ position:absolute; right: 50px; bottom: 50px; padding: 5px;background-color: #fff;}
+
+        </style>
+    </head>
+    <body> 
+        <div class="test"></div>
+        <div style="height:1000px; width:1px;  "></div>
+       <!-- 相对古老 相对简单的方法 -->
+        <table class="Center-Container table-border">
+            <tr>
+                <td class="Center-table-cell bg">
+                    <div class="Center-Block">
+                        <div class="content box-border" >
+                            <strong>需求：</strong>
+                            <p>1、左右上下居中</p>
+                            <p>2、宽高自适应</p>
+                            <p>3、横竖屏自适应</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="qrcode">
+            <img src="img/qrcode.png" width="100" height="100">
+        </div>
+    </body>
+</html>
