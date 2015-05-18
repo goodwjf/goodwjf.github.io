@@ -76,4 +76,11 @@
             <img src="img/qrcode.png" width="100" height="100">
         </div>
     </body>
+    <script type="text/javascript">
+        //禁止拖动的默认事件
+            event.preventDefault();
+        }
+        document.body.addEventListener('touchmove', preventDefault, false); 
+
+    </script>
 </html>
