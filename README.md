@@ -32,14 +32,12 @@
 
 #####4、前端技术探索：
 
-```bash
-  (1)、Bootstrap、less 、sass
+```javascript
+  (1)、React、vue
 
-  (2)、Backbonejs、Angularjs、Knockoutjs、Emberjs、Ractivejs
+  (2)、Node、Express
 
-  (3)、Node、Express
-
-  (4)、Grunt、Yeoman、 Bower、Gulp
+  (3)、webpack、Yeoman、 Gulp
 
 ```
 
